@@ -30,14 +30,14 @@ end
 local BootlegDebug = {}
 local Output = print -- Change to setclipboard if you want remotes to be copied to your clipboard
 function BootlegDebug.getinfo(thread)
-    local CurrentLine = tonumber(debug.info(thread, 'l'))
-    local Source = debug.info(thread, 's')
-    local name = debug.info(thread, 'n')
-    local numparams, isvrg = debug.info(thread, 'a')
+    local CurrentLine = tonumber(debug.(thread, 'l'))
+    local Source = debug.(thread, 's')
+    local name = debug.(thread, 'n')
+    local numparams, isvrg = debug.(thread, 'a')
     if #name == 0 then
         name = nil
     end
-    local a, b = debug.info(thread, 'a')
+    local a, b = debug.(thread, 'a')
     return {
         ['currentline'] = CurrentLine,
         ['Source'] = Source,
