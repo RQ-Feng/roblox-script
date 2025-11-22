@@ -10,5 +10,3 @@ function TableVisualization(Table)
 	end
 	forTable(Table)
 end
-
-if OriginTable then TableVisualization(OriginTable) end
