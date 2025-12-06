@@ -4,8 +4,8 @@ function TableVisualization(Table)
 	local function forTable(ForTable,arg)
 		arg = arg or ''
 		for i,v in pairs(ForTable) do
-			if type(v) == 'table' then print(arg..'[\''..i..'\']') forTable(v,arg..'∣')
-			else print(arg..'[\''..i..'\'] -> '..tostring(v)) end
+			if type(v) == 'table' then print(arg..'[\''..tostring(i)..'\']') forTable(v,arg..'∣')
+			else print(arg..'[\''..tostring(i)..'\'] -> '..tostring(v)) end
 		end
 	end
 	forTable(Table)
