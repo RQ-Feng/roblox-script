@@ -1,6 +1,6 @@
 function TableVisualization(Table)
 	if type(Table) ~= 'table' then return end
-	warn('table可视化输出:')
+	warn('[Table可视化] 输出:')
 	local function forTable(ForTable,arg)
 		arg = arg or ''
 		for i,v in pairs(ForTable) do
@@ -9,4 +9,5 @@ function TableVisualization(Table)
 		end
 	end
 	forTable(Table)
+	warn('[Table可视化] 输出完毕.')
 end
